@@ -669,3 +669,54 @@ h1 span {
     transition: none;
   }
 }
+
+
+/* Navegação entre Projetos e Design */
+.portfolio-page .header { flex-wrap: wrap; }
+.portfolio-nav { display: flex; align-items: center; gap: 10px; }
+.portfolio-nav a {
+  padding: 10px 14px; border: 1px solid var(--border); color: var(--muted);
+  text-decoration: none; font-size: 12px; letter-spacing: .4px; transition: .18s ease;
+}
+.portfolio-nav a:hover, .portfolio-nav a:focus-visible {
+  border-color: var(--accent); color: var(--text);
+}
+.portfolio-section-heading { margin-bottom: 26px; }
+.portfolio-section-heading h2, .design-feature h3 {
+  margin: 0; font-size: clamp(36px, 5vw, 54px); line-height: 1.05; letter-spacing: -1.8px;
+}
+.portfolio-section-heading h2 span, .design-feature h3 span { color: var(--accent); }
+.design-intro { max-width: 620px; color: var(--muted); line-height: 1.8; }
+.design-section { padding: 70px 0 90px; border-top: 1px solid var(--border); }
+.design-feature {
+  max-width: 760px; padding: clamp(22px, 4vw, 38px);
+  border: 1px solid var(--border); background: linear-gradient(135deg, #151316, #101012 65%);
+}
+.design-feature h3 { margin: 12px 0 16px; }
+.design-feature p:not(.design-kicker) { max-width: 620px; color: #bdbdc2; line-height: 1.85; }
+.design-kicker { margin: 28px 0 8px; color: var(--accent); font: 11px "Courier New", monospace; letter-spacing: 1.6px; }
+@media (max-width: 600px) {
+  .portfolio-page .header { padding: 16px 0; }
+  .portfolio-nav { width: 100%; }
+  .portfolio-nav a { flex: 1; text-align: center; }
+  .design-section { padding: 52px 0 64px; }
+}
+
+/* Estudo de caso PXT */
+.case-page { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+.case-hero { padding: 78px 0 54px; border-bottom: 1px solid var(--border); }
+.case-hero h1 { font-size: clamp(48px, 8vw, 88px); }
+.case-hero p:not(.eyebrow) { max-width: 680px; color: #bdbdc2; line-height: 1.9; }
+.case-section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+.case-section h2 { margin: 0 0 16px; font-size: clamp(30px, 5vw, 48px); letter-spacing: -1.5px; }
+.case-section > p { max-width: 720px; color: #bdbdc2; line-height: 1.85; }
+.case-frame { width: 100%; min-height: 560px; margin-top: 28px; border: 1px solid var(--border); background: #111; }
+.case-frame iframe { display: block; width: 100%; height: 560px; border: 0; }
+.case-transition { padding: 44px 0; color: var(--accent); font: 11px "Courier New", monospace; letter-spacing: 2px; }
+.case-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+@media (max-width: 600px) {
+  .case-page { width: calc(100% - 36px); }
+  .case-hero { padding: 56px 0 38px; }
+  .case-section { padding: 46px 0; }
+  .case-frame, .case-frame iframe { min-height: 420px; height: 420px; }
+}
